@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [ ! -d data/congress ]; then
+  mkdir -p data/congress
+fi
+
 govtrack="http://www.govtrack.us"
 base="data/congress/"
 resource="$govtrack/$base"
