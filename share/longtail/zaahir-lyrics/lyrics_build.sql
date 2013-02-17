@@ -1,0 +1,16 @@
+CREATE TABLE artists (
+  id INTEGER PRIMARY KEY,
+  name VARCHAR NOT NULL
+);
+ 
+CREATE TABLE songs (
+  id INTEGER PRIMARY KEY,
+  artist_id INTEGER NOT NULL REFERENCES artist(id),
+  title VARCHAR NOT NULL
+);
+
+CREATE TABLE lyrics (
+  id INTEGER PRIMARY KEY,
+  artist_id INTEGER NOT NULL REFERENCES artist(id),
+  title VARCHAR NOT NULL
+);
